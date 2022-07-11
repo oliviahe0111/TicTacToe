@@ -195,4 +195,4 @@ play_game()
 # check columns
 # check diagonals
 # check tie
-# flip player
+# flip players
