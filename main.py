@@ -7,7 +7,9 @@ game_still_going = True
 winner = None
 
 # Who's turn is it
-current_player = "X"
+first_player = "Hi"
+second_player = "O"
+current_player = None
 
 # empty game board
 board = ["-", "-", "-",
@@ -15,18 +17,22 @@ board = ["-", "-", "-",
          "-", "-", "-"]
 
 
-def display_board():
-    print(board[0] + " | " + board[1] + " | " + board[2])
-    print(board[3] + " | " + board[4] + " | " + board[5])
-    print(board[6] + " | " + board[7] + " | " + board[8])
+# def user_names():
+#
 
 
-# Play the game of tic-tac-toe
+# play the game of tic-tac-toe
 def play_game():
+
+    global first_player, second_player, current_player
+    first_player = input("Please input first player's name: ")
+    second_player = input("Please input second player's name: ")
+    current_player = first_player
+
     # Display initial board
     display_board()
 
-    # While the game is stil going continue loop
+    # While the game is still going continue loop
     while game_still_going:
         # handle a single turn of an arbitrary player
         handle_turn(current_player)
@@ -39,14 +45,25 @@ def play_game():
 
     # The game has ended
     if winner == "X" or winner == "O":
-        print(winner + " won.")
-    elif winner == None:
+        if winner == "X":
+            print(str(first_player) + " won.")
+        else:
+            print(str(second_player) + " won.")
+
+    elif winner is None:
         print("Tie.")
+
+
+# display the board
+def display_board():
+    print(board[0] + " | " + board[1] + " | " + board[2])
+    print(board[3] + " | " + board[4] + " | " + board[5])
+    print(board[6] + " | " + board[7] + " | " + board[8])
 
 
 # handle a single turn of an arbitrary player
 def handle_turn(player):
-    print(player + "'s turn.")
+    print(str(player) + "'s turn.")
     position = input("Choose a position from 1-9: ")
 
     valid = False
@@ -63,7 +80,11 @@ def handle_turn(player):
         else:
             position = input("Position taken. Choose a open position from 1-9: ")
 
-    board[position] = player
+    if str(player) == str(first_player):
+        board[position] = "X"
+    else:
+        board[position] = "O"
+
     display_board()
 
 
@@ -107,10 +128,10 @@ def check_rows():
     row_2 = board[3] == board[4] == board[5] != "-"
     row_3 = board[6] == board[7] == board[8] != "-"
 
-    # If any row has a match, flagthat there is a win
+    # If any row has a match, flag that there is a win
     if row_1 or row_2 or row_3:
         game_still_going = False
-    # Return the winer (X or O)
+    # Return the winner (X or O)
     if row_1:
         return board[0]
     elif row_2:
@@ -152,10 +173,10 @@ def check_diagonals():
     diagonal_1 = board[0] == board[4] == board[8] != "-"
     diagonal_2 = board[6] == board[4] == board[2] != "-"
 
-    # If any diagonal has a match, flagthat there is a win
+    # If any diagonal has a match, flag that there is a win
     if diagonal_1 or diagonal_2:
         game_still_going = False
-    # Return the winer (X or O)
+    # Return the winner (X or O)
     if diagonal_1:
         return board[0]
     elif diagonal_2:
@@ -175,15 +196,22 @@ def flip_player():
     # global varaibles we need
     global current_player
     # if the current player was X, then change it to O
-    if current_player == "X":
-        current_player = "O"
+    if current_player == first_player:
+        current_player = second_player
     # if the current player was O, then change it to X
-    elif current_player == "O":
-        current_player = "X"
+    elif current_player == second_player:
+        current_player = first_player
     return
 
 
+# def main():
+#     # ask for usernames
+#     user_names()
 play_game()
+
+
+# main()
+
 
 # board
 # display
