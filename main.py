@@ -53,15 +53,15 @@ def handle_turn(player):
     while not valid:
         # Check invalid input
         while position not in ["1", "2", "3", "4", "5", "6", "7", "8", "9"]:
-            position = input("Invaid input. Choose a position from 1-9: ")
+            position = input("Invalid input. Choose a new position from 1-9: ")
 
         position = int(position) - 1
 
-        # Check overwriitten position
+        # Check over-written position
         if board[position] == "-":
             valid = True
         else:
-            print("Postition taken. Choose a open position from 1-9: ")
+            position = input("Position taken. Choose a open position from 1-9: ")
 
     board[position] = player
     display_board()
@@ -125,8 +125,7 @@ def check_columns():
     # Set up global variables
     global game_still_going
 
-    # check if any of the columns have all the same value (and is
-    # not empty)
+    # check if any of the columns have all the same value (and is not empty)
     column_1 = board[0] == board[3] == board[6] != "-"
     column_2 = board[1] == board[4] == board[7] != "-"
     column_3 = board[2] == board[5] == board[8] != "-"
