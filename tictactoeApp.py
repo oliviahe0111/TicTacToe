@@ -4,7 +4,7 @@ import numpy as np
 
 pygame.init()
 
-WIDTH = 400
+WIDTH = 600
 HEIGHT = WIDTH
 
 BOARD_ROWS = 3
