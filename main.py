@@ -204,13 +204,7 @@ def flip_player():
     return
 
 
-# def main():
-#     # ask for usernames
-#     user_names()
 play_game()
-
-
-# main()
 
 
 # board
@@ -223,3 +217,4 @@ play_game()
 # check diagonals
 # check tie
 # flip players
+
