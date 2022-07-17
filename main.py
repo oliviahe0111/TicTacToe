@@ -22,7 +22,7 @@ board = ["-", "-", "-",
 
 
 # play the game of tic-tac-toe
-def play_game():
+def play_game_human():
 
     global first_player, second_player, current_player
     first_player = input("Please input first player's name: ")
@@ -52,6 +52,27 @@ def play_game():
 
     elif winner is None:
         print("Tie.")
+
+
+def play_game():
+    chosen = False
+    while not chosen:
+        game_choice = input("Type '1' to enter a two-player game; Type '2' to compete with an AI: ")
+        if game_choice == "1":
+            chosen = True
+            play_game_human()
+        elif game_choice == "2":
+            chosen = True
+            play_game_ai()
+        else:
+            print("Invalid input. Please try again")
+
+
+
+
+def play_game_ai():
+    pass
+
 
 
 # display the board
