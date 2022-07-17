@@ -1,3 +1,5 @@
+import playWithAi
+
 # ----Global Variables -----
 
 # If game is still going
@@ -15,10 +17,6 @@ current_player = None
 board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
-
-
-# def user_names():
-#
 
 
 # play the game of tic-tac-toe
@@ -63,16 +61,9 @@ def play_game():
             play_game_human()
         elif game_choice == "2":
             chosen = True
-            play_game_ai()
+            playWithAi.play_game_ai()
         else:
             print("Invalid input. Please try again")
-
-
-
-
-def play_game_ai():
-    pass
-
 
 
 # display the board
