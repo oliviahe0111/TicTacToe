@@ -16,7 +16,7 @@
 <img alt="image" src="https://user-images.githubusercontent.com/67666346/178646800-6fd3325c-8db5-40fa-a911-b3b056ca51a4.png" width="200" height="200">
 
 ## 2. Console based Tic Tac Toe game
-- Players can choose to play against another player or play against the computer.
+There are two verstions: Players can either play against another player or play against the computer.
 
 ### Mode 1. Console based unbeatable AI vs. human player Tic Tac Toe game using python (playWithAi.py)
 - Players can choose to start the game or let the AI start the game.
@@ -24,7 +24,11 @@
 
 - The AI uses the Minimax algorithm to play against the player. The ending will either be the AI winning the game or the human player has successfully stopped the AI from winning the game and leading to a tie.
 
+Win:<br />
 <img width="97" alt="Screen Shot 2022-07-24 at 11 36 51 PM" src="https://user-images.githubusercontent.com/67666346/180714216-12e6ee30-ea3e-4dcb-ac34-6651a9da24cd.png">
+<br />
+Tie: <br />
+<img width="371" alt="Screen Shot 2022-07-25 at 12 00 29 AM" src="https://user-images.githubusercontent.com/67666346/180717152-2372973f-8262-4b94-9c7e-9b68a29b3b88.png">
 
 
 ### Mode 2. Console based Tic Tac Toe game using python (main.py)
