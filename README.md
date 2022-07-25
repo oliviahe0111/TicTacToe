@@ -38,3 +38,9 @@
 
 - Error message will also pop out if a user enters number or anything beside 1 to 9.
 <img width="385" alt="Screen Shot 2022-07-12 at 9 06 27 PM" src="https://user-images.githubusercontent.com/67666346/178648428-4f1062dc-3932-4f77-86b9-cfb764e3888d.png">
+
+
+### References
+1. Basic console based Tic Tac Toe in Python : https://www.youtube.com/watch?v=BHh654_7Cmw
+2. Using Pygame to make a GUI for the game: https://www.youtube.com/watch?v=pc7XhHxSgrM
+3. Using Minimax algorithm to make an un beatable AI opponent for human player: https://www.youtube.com/watch?v=JC1QsLOXp-I
