@@ -225,5 +225,3 @@ def play_game_ai():
             print("Invalid input. Please try again!")
 
 
-play_game_ai()
-

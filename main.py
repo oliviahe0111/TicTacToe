@@ -1,5 +1,4 @@
 import playWithAi
-
 # ----Global Variables -----
 
 # If game is still going
