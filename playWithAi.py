@@ -206,9 +206,23 @@ def play_game_ai():
     # Display initial board
     display_board(board)
 
-    while not check_for_winner():
-        player_turn()
-        ai_turn()
+    chosen = False
+    while not chosen:
+        first_player = input("Type '1' to play first; Type '2' to let the AI play first: ")
+        if first_player == '1':
+            chosen = True
+            while not check_for_winner():
+                player_turn()
+                print("\n")
+                ai_turn()
+        elif first_player == '2':
+            chosen = True
+            while not check_for_winner():
+                ai_turn()
+                print("\n")
+                player_turn()
+        else:
+            print("Invalid input. Please try again!")
 
 
 play_game_ai()
