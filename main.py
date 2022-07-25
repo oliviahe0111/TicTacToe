@@ -63,7 +63,7 @@ def play_game():
             chosen = True
             playWithAi.play_game_ai()
         else:
-            print("Invalid input. Please try again")
+            print("Invalid input. Please try again!")
 
 
 # display the board

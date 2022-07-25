@@ -181,7 +181,7 @@ while True:
             mouseX = event.pos[0] # x coordinate
             mouseY = event.pos[1] # y coordinate
 
-            clicked_row = int(mouseY // SQUARE_SIZE )
+            clicked_row = int(mouseY // SQUARE_SIZE)
             clicked_col = int(mouseX // SQUARE_SIZE)
 
             if available_square(clicked_row, clicked_col):
